@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	a := []int{6, 3, 4, 2, 5, 7, 10000, 2, 3422, 123, 12341234, 234, 22, 341234}
+func bubble_sort(a []int) {
 	for i := len(a) - 1; i > 0; i-- {
 		for j := 0; j < i; j++ {
 			if a[j] > a[j+1] {
@@ -13,5 +8,4 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(a)
 }
