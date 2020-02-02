@@ -26,11 +26,15 @@ func partition(a []int, i, j int) int {
 	return l
 }
 
-func quick_sort(a []int, i, j int) {
+func _quick_sort(a []int, i, j int) {
 	if j-i <= 1 {
 		return
 	}
 	p := partition(a, i, j)
-	quick_sort(a, i, p)
-	quick_sort(a, p+1, j)
+	_quick_sort(a, i, p)
+	_quick_sort(a, p+1, j)
+}
+
+func quick_sort(a []int) {
+	_quick_sort(a, 0, len(a))
 }
